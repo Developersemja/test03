@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ee0000;
+    font-family: "Oswald", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: 	#f8f8f8;
+}
+
+p{
+    color: 	#f8f8f8; 
+    letter-spacing: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Container */
+.container {
+    margin: 0 auto;
+    padding: 0 ;
+}
+
+/* Grid System */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.col {
+    flex: 1;
+}
+
+.col-1 { flex: 1; }
+.col-2 { flex: 2; }
+.col-3 { flex: 3; }
+
+/*-----------------------------------Text-animation-----------------------------------*/
+:root{
+    --bg-color: #ee0000;
+}
+
+.text-animation span{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    line-height: 1.2;
+}
+
+.text-animation.animate span::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(-101%);
+}
+
+.text-animation.animate span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+    transform: translateX(0);
+}
+
+@keyframes a-ltr-after{
+    0% {transform: translateX(-100%)}
+    100% {transform: translateX(101%)}
+}
+
+@keyframes a-ltr-before{
+    0% {transform: translateX(0)}
+    100% {transform: translateX(200%)}
+}
+
+
+
+
+
+/*-----------------------------------Home Banner-----------------------------------*/
+.heading.col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header.container{
+    padding: 0%; 
+}
+
+.header-img{
+    height: 100vh;
+}
+
+.header-img img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.heading.col h1{
+    font-size: 80px;
+}
+
+
+
+/*-----------------------------------About Section----------------------------------------*/
+
+.about.col{
+   
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about.col h1{
+    font-size: 80px;
+}
