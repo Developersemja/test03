@@ -24,6 +24,12 @@ a {
     text-decoration: none;
 }
 
+::selection {
+    background: #f8f8f8;
+    color: #ee0000;
+  }
+
+
 /* -----------------------------------Container----------------------------------- */
 .container {
     margin: 0 auto;
@@ -48,19 +54,28 @@ a {
 /* -----------------------------------Scroll Bar----------------------------------- */
 
 ::-webkit-scrollbar {
-    width: 10px;
+    display: none;
+    
   }
     ::-webkit-scrollbar-track {
     background: #ee0000; 
   }
     ::-webkit-scrollbar-thumb {
       background: #f8f8f8; 
-      border-radius:10px;
+      border-radius:3px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    
     background: #555; 
   } 
+  .wrapper::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+    margin-bottom: 10px; 
+}
+
+.wrapper::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 10px;
+}
 
 /*-----------------------------------Text-animation-----------------------------------*/
 :root{
