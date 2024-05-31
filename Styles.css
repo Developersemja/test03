@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -168,4 +169,64 @@ a {
 
 .about.col h1{
     font-size: 80px;
+}
+
+
+/*-----------------------------------Project Section----------------------------------------*/
+
+.project.col-3 {
+    height: 40vh;
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.project.col-3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.project.col-2 {
+    height: 40vh;
+    display: flex;  
+    justify-content: space-evenly; 
+}
+
+.project.col-2 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.product{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.prd.container{
+    width: 100%;
+    padding: 20px;
+}
+
+.scprd.row{
+    margin-top: 1%;
+    gap: 20px;
+}
+
+.prd.row{
+    gap: 20px;
+}
+
+.prd.col h1{
+    font-size: 80px;  
+}
+.prd.col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
 }
