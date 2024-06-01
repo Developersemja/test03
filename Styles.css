@@ -25,6 +25,7 @@ p{
 
 a {
     text-decoration: none;
+    cursor:url(images/anchor.svg),auto;
 }
 
 ::selection {
