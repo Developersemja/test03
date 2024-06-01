@@ -1,3 +1,5 @@
+//--------------------------------Text Animation-----------------------------//
+
 document.addEventListener('DOMContentLoaded', () => {
     const observerOptions = {
         root: null,
@@ -20,7 +22,25 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//--------------------------------Timeline-----------------------------//
+//--------------------------------Lottie-----------------------------//
+
+document.addEventListener('DOMContentLoaded', () => {
+    const lottiePlayer = document.getElementById('lottie');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          lottiePlayer.play();
+        } else {
+          lottiePlayer.stop();
+        }
+      });
+    }, {
+      threshold: 1.0
+    });
+
+    observer.observe(lottiePlayer);
+  });
 
 
   
