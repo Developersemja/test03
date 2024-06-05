@@ -177,7 +177,7 @@ a {
 
 /*-----------------------------------Project Section----------------------------------------*/
 .project.col-3 {
-    height: 40vh;
+    height: 30vh;
     display: flex;
     justify-content: space-evenly; 
 }
@@ -390,3 +390,17 @@ a {
     height: 500px;
     width: 500px;
    }
+
+
+   /*-----------------------------------Horizontal Scroll--------------------------------*/
+
+   .container-gsap {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.panel {
+    min-width: 100vw;
+    height: 100vh;
+}

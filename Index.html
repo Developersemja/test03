@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
+    
+
   </head>
   <body>
     <!-------------------------Header section------------------------------->
@@ -34,6 +36,8 @@
     </section>
 
     <!-------------------------About section---------------------------------->
+    <div class="container-gsap">
+      <div class="panel">
     <section>
       <div class="container">
         <div class="row">
@@ -46,52 +50,58 @@
         </div>
       </div>
     </section>
+      </div>
 
     <!-------------------------Project section---------------------------------->
-    <section class="product">
-      <div class="prd container">
-        <div class="row">
-          <div class="prd col">
-            <h1 class="text-animation">
-              <span> This is a section title </span>
-            </h1>
-            <p>This is a Paragraph section</p>
+      
+      <div class="panel">
+        <section class="product">
+          <div class="prd container">
+            <div class="row">
+              <div class="prd col">
+                <h1 class="text-animation">
+                  <span> This is a section title </span>
+                </h1>
+                <p>This is a Paragraph section</p>
+              </div>
+            </div>
+            <div class="prd row">
+              <div class="project col-3">
+                <img src="images/Designer.png" alt="" />
+              </div>
+              <div class="project col-3">
+                <img src="images/Designer.png" alt="" />
+              </div>
+              <div class="project col-3">
+                <img src="images/Designer.png" alt="" />
+              </div>
+            </div>
+            <div class="scprd row">
+              <div class="project col-2">
+                <img src="images/Designer.png" alt="" />
+              </div>
+              <div class="project col-2">
+                <img src="images/Designer.png" alt="" />
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="prd row">
-          <div class="project col-3">
-            <img src="images/Designer.png" alt="" />
-          </div>
-          <div class="project col-3">
-            <img src="images/Designer.png" alt="" />
-          </div>
-          <div class="project col-3">
-            <img src="images/Designer.png" alt="" />
-          </div>
-        </div>
-        <div class="scprd row">
-          <div class="project col-2">
-            <img src="images/Designer.png" alt="" />
-          </div>
-          <div class="project col-2">
-            <img src="images/Designer.png" alt="" />
-          </div>
-        </div>
+        </section>
       </div>
-    </section>
+     
 
     <!-------------------------Timeline---------------------------------->
-    <section class="tml">
-      <div class="container">
-        <div class="row">
-          <div class="prd col">
-            <h1 class="text-animation">
-              <span> This is a section title </span>
-            </h1>
-            <p>This is a Paragraph section</p>
-          </div>
-        </div>
-        <div class="tm row">
+    <div class="panel">
+        <section class="tml">
+          <div class="container">
+            <div class="row">
+              <div class="prd col">
+                <h1 class="text-animation">
+                  <span> This is a section title </span>
+                </h1>
+                <p>This is a Paragraph section</p>
+              </div>
+            </div>
+          <div class="tm row">
           <div class="tmimg col-2">
             <img src="images/Designer.png" alt="" />
           </div>
@@ -102,6 +112,10 @@
             </div>
           </div>
         </div>
+        </section>
+    </div>
+    </div>  
+      <section >
         <div class="tm row">
           <div class="tm2 col-2">
             <div class="tm2-content">
@@ -135,8 +149,8 @@
             <img src="images/Designer.png" alt="" />
           </div>
         </div>
-      </div>
-    </section>
+      
+      </section>
 
     <!-------------------------Skills---------------------------------->
     <section>
@@ -203,5 +217,45 @@
     </section>
 
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lenis@latest/dist/lenis.min.js"></script>
+    
+ 
+    
+    <script>
+     //--------------------------------Horizontal Scroll-----------------------------//
+ // Function to apply GSAP horizontal scroll when the display width is over 800px
+ function applyHorizontalScroll() {
+  gsap.registerPlugin(ScrollTrigger);
+  let sections = gsap.utils.toArray(".panel");
+  gsap.to(sections, {
+      xPercent: -100 * (sections.length - 1),
+      ease: "none",
+      scrollTrigger: {
+          trigger: ".container-gsap",
+          pin: true,
+          scrub: 1,
+          snap: 1 / (sections.length - 1),
+          end: () => "+=" + (sections.length - 1) * window.innerWidth,
+      },
+  });
+}
+
+// Check the window width and apply the effect if it's over 800px
+if (window.innerWidth > 800) {
+  applyHorizontalScroll();
+}
+
+// Lenis initialization (always active)
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+    </script>
   </body>
 </html>
