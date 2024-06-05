@@ -258,6 +258,12 @@ a {
         text-align: center;
         font-size: 65px;
     }
+    .project.col-2 {
+        height: 20vh;
+    }
+    .project.col-3{
+        height: 15vh;
+    }
 }
 
 
