@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 p{
     color: 	#f8f8f8; 
     letter-spacing: 3px;
+/*font-family: "Gabarito", sans-serif;*/
 }
 
 a {
@@ -395,12 +396,61 @@ a {
    /*-----------------------------------Horizontal Scroll--------------------------------*/
 
    .container-gsap {
-    display: flex;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-}
-.panel {
-    min-width: 100vw;
-    height: 100vh;
-}
+     display: flex;
+     overflow: hidden;
+     width: 100vw;
+     height: 100vh;
+    }
+    .panel {
+     min-width: 100vw;
+     height: 100vh;
+    }
+
+
+    /*-----------------------------------Contact-----------------------------------*/
+
+    .contact.row{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact.container{
+        height: 100vh;
+    }
+
+    .contact.col-2 input{
+       border-bottom: 3px dashed #f8f8f8;
+       font-size: 60px;
+       text-transform: lowercase;
+    }
+
+    input, textarea, label {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+        background: none;
+        font: inherit;
+        color: inherit;
+    }
+
+    .contact.col-2 label{
+        font-size:60px ;
+        color: #f8f8f8 ;
+    }
+
+    .contact.col-2 form{
+        padding: 2%;
+    }
+
+    .contact.col-2 #Location{
+        width: 15%;
+    }
+
+    .contact.col-2 textarea{
+        border-bottom: 3px dashed #f8f8f8;
+        font-size: 60px;
+        text-transform: lowercase;
+        width: 100%;
+     }
