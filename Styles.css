@@ -486,3 +486,24 @@ a {
         text-transform: lowercase;
         width: 100%;
      }
+
+     #contact-lottie{
+        width: 60vh ;
+        height: 30vh;
+        margin-top: -15%;
+     }
+
+
+     /* T-Rex Game Styles */
+.t-rex-game-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* Adjust the height as needed */
+    margin-top: 20px;
+    background-color: #f7f7f7; /* Ensure it blends well with your site */
+}
+
+#t-rex-game-canvas {
+    border: 1px solid #ccc;
+}
