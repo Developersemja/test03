@@ -147,6 +147,8 @@ a {
 
 .header-img{
     height: 100vh;
+    background-attachment: fixed;
+    background-image:url("images/Designer.png");
 }
 
 .header-img img{
@@ -154,6 +156,7 @@ a {
     object-fit: cover;
     width: 100%;
 }
+
 
 .heading.col h1{
     font-size: 80px;
@@ -171,6 +174,16 @@ a {
     }
 
     
+ }
+
+ .typography{
+   
+    position: absolute;
+   z-index: -1;
+    font-size: 40vh;
+    -webkit-text-stroke: 3px #f8f8f8;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.2;
  }
 
 /*-----------------------------------About Section----------------------------------------*/
@@ -552,3 +565,23 @@ a {
     color: aliceblue;
   }
   
+      /*-----------------------------------End-----------------------------------*/
+
+      .container.end{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f8f8;
+      }
+
+      blockquote{
+        color: #ee0000;
+        font-size: 8vh;
+        text-align: center;
+      }
+
+      .author{
+        font-style: italic;
+        font-size: 5vh;
+      }
