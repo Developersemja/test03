@@ -575,6 +575,11 @@ a {
         background-color: #f8f8f8;
       }
 
+      blockquote::selection{
+        background-color: #ee0000;
+        color: #f8f8f8;
+      }
+
       blockquote{
         color: #ee0000;
         font-size: 8vh;
