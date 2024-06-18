@@ -5,6 +5,13 @@
     scroll-behavior: smooth;
 }
 
+div {
+    overflow: auto !important; 
+    outline: 2px solid black !important;/* or scroll, hidden, etc. depending on your needs */
+  }
+  
+ 
+
 
 body{
     background-color: #ee0000;
@@ -327,6 +334,16 @@ a {
     margin-right: 5%;
 }
 
+@media only screen and (max-width: 600px){
+    .skills.col-5 {
+        flex-direction: column;
+    }
+    .skills.container{
+        height: auto !important;
+    }
+}
+
+
 /*-----------------------------------SKills--------------------------------*/
 
 .skills.container{
@@ -437,6 +454,12 @@ a {
     width: 500px;
    }
 
+   @media only screen and (max-width: 600px){
+    .skill.col.resume{
+        flex-direction: column;
+    }
+}
+
 
    /*-----------------------------------Horizontal Scroll--------------------------------*/
 
@@ -506,6 +529,21 @@ a {
         margin-top: -15%;
      }
 
+     @media only screen and (max-width: 600px){
+        .contact.container{
+            height: auto;
+        }
+        .contact.col-2 input{
+            font-size: 30px;
+        }
+        .contact.col-2 textarea{
+            font-size: 30px;
+        }
+        .contact.col-2 label{
+            font-size: 30px;
+        }
+    
+     }
 
 
 
